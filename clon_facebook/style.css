@@ -1,60 +1,200 @@
-html,body{
-font-family: arial, sans-serif;
-  height: 100vh;
+html,
+body {
+  font-family: arial, sans-serif;
+  height: 90vh;
   margin: 0;
 }
-body{
-    background-color:  #f3f3f3;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+body {
+  background-color: #f3f3f3;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-main{
-    display: flex;
-    flex-grow: 3;
-    justify-content: center;
-    align-items: center;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /** Lado con el log */
-.logo{
-    margin: 0px 30px 0px 360px;}
+.logo {
+  margin: 0px 20px 0px 200px;
+}
 
 .logo .logo_img {
-    width: 418px;
-    height: 141px;
+  width: 418px;
+  height: 141px;
 }
-.logo p{
-    font-size: 40px;
-    margin: 0px 30px 0px 57px;
+.logo p {
+  font-size: 39px;
+  margin: 0px 30px 0px 57px;
 }
 /** Lado con el form*/
-.caja_inicio{
-    margin: 0px 100px 0px 10px;
+.caja_inicio {
+  margin: 0px 100px 0px 10px;
 }
 .inicio_ses {
-    align-items: center;
-    background-color: #fff;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
-    box-sizing: border-box;
-    margin: 140px 167px 65px 22px;
-    padding: 20px 0 28px;
-    width: 500px;
-    height: 460px;
+  align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  margin: 140px 167px 65px 22px;
+  padding: 20px 0 28px;
+  width: 500px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.email input,
+.contrasena input {
+  width: 430px;
+  height: 70px;
+  margin: 0px 0px 0px;
+  font-size: 20px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 8px;
+  border: 1px solid #dddfe2;
+  outline: none;
+}
+
+.email input:hover,
+.contrasena input:hover {
+  border: 1px solid #8caee0;
+  color: #e2e6eb;
+}
+#Iniciar_sesion {
+  background-color: #1877f2;
+  height: 70px;
+  font-weight: 600;
+  margin: 20px 0px 20px 0px;
+  font-size: 24px;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+}
+
+#Iniciar_sesion:hover {
+  background-color: #4267b2;
+}
+
+.caja_inicio .marca {
+  margin: 42px 0px 0px 0px;
+}
+
+.olvidar_contrasena {
+  text-align: center;
+}
+
+.linea {
+  margin-top: 23px;
+  height: 10px;
+  width: 80%;
+  border-bottom: 1px solid #dadde1;
+}
+
+.registro input {
+  cursor: pointer;
+  height: 70px;
+  font-weight: 600;
+  margin: 20px 0px 20px 0px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  background-color: #42b72a;
 }
 
 /* Footer */
-footer{
-    height: 50px;
+footer {
+  margin: 0px;
+  background-color: #fff;
+  margin: 100px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .idiomas,
+footer .links {
+  display: flex;
+  margin: 10px 0px 0px 40px;
+}
+
+footer .idiomas p,
+footer .links p {
+  margin-right: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.linea1 {
+  height: 10px;
+  width: 80%;
+  border-bottom: 1px solid #dadde1;
+}
+
+.idiomas,
+.links {
+  display: flex;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+
+  .logo {
+    display: flex;
+    margin: 0px 0px 47px 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo .logo_img {
+    width: 388px;
+    height: 128px;
+  }
+  .logo p {
+    font-size: 25px;
+    margin: 0px 30px 0px 57px;
+  }
+  .caja_inicio {
+    width: 100%;
+    margin: 0px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .inicio_ses {
+    margin: 0px;
+  }
+  .marca {
+    font-size: 22px;
+    margin: 70px 0px 0px 0px;
+  }
+  footer {
+    margin: 61px 0px 0px 0px;
 }
-
-footer .idiomas,footer .links{
-    display: flex;
 }
-
-
