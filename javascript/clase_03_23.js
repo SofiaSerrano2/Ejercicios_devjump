@@ -1,7 +1,7 @@
 //  //EJERCICIO 1
  
 // let nombre = prompt ("Inserte su nombre aquí");
-// let edad = parseInt( prompt(` Hola ${nombre} coloca tu edad`));
+// let edad = Number( prompt(` Hola ${nombre} coloca tu edad`));
 
 // if (edad>=18) {
 // alert (`${nombre} Podes entrar.`);
@@ -15,8 +15,6 @@
 // alert(`Por favor ${nombre} ingrese solo números.`)
 // } 
 
-
-
 // // EJERCICIO 2
  
 // let nombre = prompt ("Inserte su nombre aquí");
@@ -24,8 +22,6 @@
 
 // let numero = parseInt (prompt(`Inserte un número para hacer una suma`));
 // alert(`${(nombre.length+numero)}`)
-
-
 
 // // EJERCICIO 3
  
@@ -44,8 +40,6 @@
 // else {
 //     document.write(`ERROR! Por favor, Ingrese un número.`);
 // }
-
-
 
 // // EJERCICIO 4
 
@@ -94,21 +88,21 @@
 
 //**EJERCICIO 4
 
-let categoriaIng = Number(prompt("Ingrese alguna de las siguientes categorias 1-repositos, 2 cajero, 3-supervisor"));
-let repositores = 15890+(15890*(10/100));
-let cajeros = 25630.39;
-let supervisores = (35560.20 -((35560.20)*(11/100))) .toFixed(2);
-let rt = 0; 
-if(Number.isNaN(categoriaIng) == false){
-    rt= "Ingrese solo numeros por favorcito, no letras ";
-}
-else { rt = (categoriaIng===1) ? (`Repositor su categoria es ${categoriaIng} y su sueldo es de $${repositores}.`)
-: (categoriaIng===2) ? (`Cajero su categoria es ${categoriaIng} y su sueldo es de $${cajeros}.`)
-: (categoriaIng===3) ? (`Supervisor su categoria es ${categoriaIng} y su sueldo es de $${supervisores}.`)
-: (`Ingresa un número que este dentro de las categorias.`);
-}
+// let categoriaIng = Number(prompt("Ingrese alguna de las siguientes categorias 1-repositos, 2 cajero, 3-supervisor"));
+// let repositores = 15890+(15890*(10/100));
+// let cajeros = 25630.39;
+// let supervisores = (35560.20 -((35560.20)*(11/100))) .toFixed(2);
+// let rt = 0; 
+// if(Number.isNaN(categoriaIng) == false){
+//     rt= "Ingrese solo numeros por favorcito, no letras ";
+// }
+// else { rt = (categoriaIng===1) ? (`Repositor su categoria es ${categoriaIng} y su sueldo es de $${repositores}.`)
+// : (categoriaIng===2) ? (`Cajero su categoria es ${categoriaIng} y su sueldo es de $${cajeros}.`)
+// : (categoriaIng===3) ? (`Supervisor su categoria es ${categoriaIng} y su sueldo es de $${supervisores}.`)
+// : (`Ingresa un número que este dentro de las categorias.`);
+// }
 
-document.write(rt);
+// document.write(rt);
 
         //?Lo hice con switch 
         //? Intento hacerlo con switch a ver si lo entendí 
