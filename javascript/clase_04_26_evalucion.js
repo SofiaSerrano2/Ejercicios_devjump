@@ -92,7 +92,8 @@ function numeroMasGrande(numeros) {
   // const arrayOrde=numeros.sort()
   // return Number(arrayOrde[arrayOrde.length-1]);
 
-  return Math.max.apply(null, numeros);
+  // return Math.max.apply(null, numeros);
+  return Math.max(...numeros);
 }
 
 
@@ -197,11 +198,16 @@ function breakStatement(numero) {
     suma = suma + 2;
     arraNuevo.push(suma);
     if (suma == index) {
-      return "Se interrumpió la ejecución";
       break;
     }
   }
-  return arraNuevo;
+  if(suma== index){
+    return "Se interrumpió la ejecución";
+  }
+  else{
+    return arraNuevo;
+  }
+  
 }
 
 
