@@ -12,10 +12,10 @@ const clasificaciones = ["Marcos", "Franco", "Agostina", "Leon", "Juan Cruz", "E
 // script:
 function clasificacionActual(array) {
     for (let index = 0; index < array.length; index++) {
-        console.log(array[index]);
+        console.log(`${index+1} - ${array[index]}`)
     }
 }
-clasificacionActual(clasificaciones);
+clasificacionActual(clasificaciones)
 // 3)El concurso continua, y se van modifican esas posiciones anteriores. Debemos cambiar en el array:
 
 // a)Leon adelanta a Agostina
@@ -47,14 +47,16 @@ function descalificado(array, eliminado) {
 // console.log(descalificado(clasificaciones, "Eduardo"))
 // c)Detrás de Marcos y antes de Franco se clasifican dos nuevos concursantes: Julieta y Martina, en ese orden
 // script:
-let nuevosConcursantesMetodos = (array, nuevo1) => {
+let nuevosConcursantesMetodos =  (array, nuevo1,nuevo2, detrasDe) => {
     for (let index = 0; index < array.length; index++) {
-        if (array[index] == "Marcos") {
-            array.splice(index, 1, "nuevo") //No me está funcionando con el splice and someone TELL ME WHYYYYYYYYYYYYYYYYYY
+        if (array[index] == detrasDe) {
+            array.splice(index,0,nuevo1,nuevo2) //No me está funcionando con el splice and someone TELL ME WHYYYYYYYYYYYYYYYYYY
+            array.splice(index+1,0,nuevo2) 
         }
     }
     return array;
 };
+console.log(nuevosConcursantesMetodos(clasificaciones,"Julia","Marta","Marcos"))
 
 let nuevosConcursantes = (array, nuevo1, nuevo2, detrasDe) => {
     let nuevoArray = [];
@@ -87,16 +89,17 @@ let encabezaLista = (array, nombre) => {
 
 function general(array) {
     console.log(array);
-    let array1=CambioAdelanto(array, "Leon", "Agustina");
-    console.log(array1);
-    let array2=descalificado(array1, "Eduardo");
-    console.log(array2);
-    let array3=nuevosConcursantes(array2, "Julieta", "Martina", "Marcos");
+    CambioAdelanto(array, "Leon", "Agustina");
+    console.log(array);
+    descalificado(array, "Eduardo");
+    console.log(array);
+    let array3=nuevosConcursantes(array, "Julieta", "Martina", "Marcos");
     console.log(array3);
-    let array4=encabezaLista(array3, "Alicia");
-    console.log(array4);
-    return array4;
+    encabezaLista(array3, "Alicia");
+    console.log(array3);
+    return array3;
 }
 
 // const      princi clasificaciones = ["Marcos", "Franco", "Agostina", "Leon", "Juan Cruz", "Eduardo"];
 console.log(general(clasificaciones))
+

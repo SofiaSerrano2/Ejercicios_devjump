@@ -109,6 +109,16 @@ function multiplicarArgumentos() {
   //     return 0;
   //   };
   // }
+  if(arguments.length==0){
+    return 0
+  }
+  else{
+    let multi=1;
+    for (let index = 0;  index< arguments.length; index++) {
+      multi*=arguments[index];
+    }
+  }
+
 }
 
 
